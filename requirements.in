@@ -1,0 +1,8 @@
+pytest
+pytest-cov
+pre-commit
+flake8
+mypy
+tox
+names
+setuptools_scm
