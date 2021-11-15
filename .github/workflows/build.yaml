@@ -38,10 +38,12 @@ jobs:
           msystem: MINGW64
           install: git mingw-w64-x86_64-python mingw-w64-x86_64-python-setuptools
           update: true
-      - run: pip install -U 'setuptools>=45'
-        if: matrix.python_version != 'msys2'
-      - run: pip install -e .
-      - run: pytest
+      - name: Install depedencies
+        run: |
+          pip install --upgrade pip tox tox-gh-actions
+          pip install -e .
+      - name: Run checks with tox
+        run: tox
 
   dist:
     runs-on: ubuntu-latest
