@@ -1,10 +1,10 @@
-name: python tests+artifacts+release
+name: python publish
 
 on:
   pull_request:
   push:
     branches:
-    - main
+    - master
     tags:
     - "*"
   release:
