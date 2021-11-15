@@ -38,7 +38,7 @@ jobs:
           msystem: MINGW64
           install: git mingw-w64-x86_64-python mingw-w64-x86_64-python-setuptools
           update: true
-      - name: Install depedencies
+      - name: Install dependencies
         run: |
           pip install --upgrade pip tox tox-gh-actions
           pip install -e .
